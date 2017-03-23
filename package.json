@@ -1,0 +1,19 @@
+{
+  "name": "fhir-proof",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janstuemmel/fhir-proof.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janstuemmel/fhir-proof/issues"
+  },
+  "homepage": "https://github.com/janstuemmel/fhir-proof#readme"
+}
