@@ -5,8 +5,7 @@ describe('Basic tests, examples, etc', () => {
   it('Readme example', () => {
 
     // given
-    const json = JSON.stringify({
-      "id": "1",
+    const data = {
       "status":"final",
       "code": {
         "text":"Height",
@@ -18,7 +17,7 @@ describe('Basic tests, examples, etc', () => {
           }
         ]
       }
-    });
+    };
 
     // when
     const c = Coding({
@@ -39,7 +38,7 @@ describe('Basic tests, examples, etc', () => {
     });
 
     // then
-    expect(JSON.stringify(o)).toBe(json);
+    expect(o).toMatchObject(data);
   });
 
 
