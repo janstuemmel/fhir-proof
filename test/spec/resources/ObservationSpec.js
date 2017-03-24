@@ -1,41 +1,7 @@
 import t from 'tcomb';
 
-import Observation, { ObservationStatus } from '../../../lib/resources/Observation';
+import Observation from '../../../lib/resources/Observation';
 import CodeableConcept from '../../../lib/types/CodeableConcept';
-
-describe('ObservationStatus', () => {
-
-  var STATUS_CODES = [
-    'registered',
-    'preliminary',
-    'final',
-    'amended',
-    'corrected',
-    'cancelled',
-    'entered-in-error',
-    'unknown',
-  ];
-
-  it('should validate on correct code', () => {
-
-    // when
-    STATUS_CODES.forEach((status, i) => {
-
-      // then
-      expect(t.is(status, ObservationStatus)).toBe(true);
-    });
-
-  });
-
-
-  it('should error on wrong code', () => {
-
-    // then
-    expect(t.is('foo', ObservationStatus)).toBe(false);
-
-  });
-
-});
 
 
 describe('Observation', () => {
