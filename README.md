@@ -6,10 +6,8 @@ This library provides a (very small atm) subset of javascript classes for the [H
 
 ## Install
 
-it's not registered on npm yet.
-
 ```sh
-npm i janstuemmel/fhir-proof --save
+npm install fhir-proof --save
 ```
 
 run tests with `npm test`
