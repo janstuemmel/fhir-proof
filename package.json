@@ -1,7 +1,7 @@
 {
   "name": "fhir-proof",
   "version": "0.1.0",
-  "description": "",
+  "description": "typed javascript classes for fhir",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest"
