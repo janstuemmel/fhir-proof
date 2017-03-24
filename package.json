@@ -1,6 +1,6 @@
 {
   "name": "fhir-proof",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "typed javascript classes for fhir",
   "main": "lib/index.js",
   "scripts": {
