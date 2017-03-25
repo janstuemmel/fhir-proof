@@ -4,3 +4,11 @@ node_js:
   - "6"
 cache:
   yarn: true
+script:
+  - npm test -- --coverage
+after_success:
+  - node_modules/.bin/codeclimate-test-reporter < ./coverage/lcov.info
+addons:
+  code_climate:
+    repo_token:
+      secure: 4958ffe9d26eb014f1ccec74bcb3e6fd7a2ce8d24fa8dc17372d78dec53456d7

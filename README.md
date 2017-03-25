@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/janstuemmel/fhir-proof.svg?branch=master)](https://travis-ci.org/janstuemmel/fhir-proof)
+[![Test Coverage](https://codeclimate.com/github/janstuemmel/fhir-proof/badges/coverage.svg)](https://codeclimate.com/github/janstuemmel/fhir-proof/coverage)
+[![npm version](https://badge.fury.io/js/fhir-proof.svg)](https://badge.fury.io/js/fhir-proof)
 
 # FhirProof
 
