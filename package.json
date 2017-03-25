@@ -5,7 +5,12 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint ./lib"
+    "lint": "eslint ./lib",
+    "test:all": "npm test -- --coverage && npm run lint",
+    "test:watch": "npm test -- --watch",
+    "version:patch": "npm run test:all && npm version patch",
+    "version:minor": "npm run test:all && npm version minor",
+    "version:major": "npm run test:all && npm version major"
   },
   "repository": {
     "type": "git",
