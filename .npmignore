@@ -1,4 +1,6 @@
 .eslintrc.yml
 .gitignore
 .travis.yml
+.babelrc
+coverage
 test
