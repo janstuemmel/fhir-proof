@@ -1,4 +1,6 @@
-import { Observation, CodeableConcept, Coding } from '../../'; // 'fhir-proof'
+import { Observation, CodeableConcept, Coding, Patient, HumanName } from '../../'; // 'fhir-proof'
+
+const t = require('tcomb');
 
 describe('Basic tests, examples, etc', () => {
 
@@ -55,5 +57,22 @@ describe('Basic tests, examples, etc', () => {
     .toThrow();
 
   });
+
+
+  it('refine Patient', () => {
+
+    // given
+
+    // Patient name is not undefined and has at least one HumanName
+    var PatientExtra = t.refinement(Patient, function(p) {
+      return p.name !== undefined && p.name.length > 0;
+    })
+
+    // when
+    var patient2 = PatientExtra({ name: [] })
+    console.log(patient2);
+
+
+  })
 
 });
