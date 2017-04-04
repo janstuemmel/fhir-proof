@@ -18,7 +18,11 @@ run tests with `npm test`
 
 ```js
 
-import { Observation, CodeableConcept, Coding } from 'fhir-proof';
+import { Resources, Types } from 'fhir-proof';
+
+const { Observation } = Resources;
+const { CodeableConcept, Coding } = Types;
+
 
 const c = Coding({
   system: 'http://loinc.org',

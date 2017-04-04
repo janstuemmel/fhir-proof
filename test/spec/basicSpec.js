@@ -1,4 +1,7 @@
-import { Observation, CodeableConcept, Coding } from '../../'; // 'fhir-proof'
+import { Resources, Types } from '../../'; // 'fhir-proof'
+
+const { Observation, Patient } = Resources;
+const { CodeableConcept, Coding, HumanName } = Types;
 
 describe('Basic tests, examples, etc', () => {
 
@@ -55,5 +58,6 @@ describe('Basic tests, examples, etc', () => {
     .toThrow();
 
   });
+
 
 });

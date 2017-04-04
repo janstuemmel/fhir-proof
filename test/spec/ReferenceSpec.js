@@ -1,30 +1,30 @@
 import t from 'tcomb';
 
+import Resource from '../../lib/Resource';
 import Reference from '../../lib/Reference';
-import BaseResource from '../../lib/resources/Base';
 
 
 describe('Reference', () => {
 
-  var subj, Resource;
+  var subj, TestResource;
 
   beforeEach(() => {
 
     // test structure
-    Resource = BaseResource.extend({ subj: Reference });
+    TestResource = Resource.extend({ subj: Reference });
 
     // test object
-    subj = BaseResource({ id: '1', resourceType: 'TestSubject' });
+    subj = Resource({ id: '1', resourceType: 'TestSubject' });
   });
 
 
-  it('should create refernce on a resource', () => {
+  it('should create reference on a resource', () => {
 
     // given
     var ref = Reference.create(subj);
 
     // when
-    var res = Resource({ subj: ref, resourceType: 'TestResource' });
+    var res = TestResource({ subj: ref, resourceType: 'TestResource' });
 
     // then
     expect(res).toMatchObject({ subj: {

@@ -1,9 +1,9 @@
 import t from 'tcomb';
 
-import Base from '../../../lib/resources/Base';
+import Resource from '../../lib/Resource';
 
 
-describe('Base', () => {
+describe('Resource', () => {
 
   it('should validate', () => {
 
@@ -11,7 +11,7 @@ describe('Base', () => {
     expect(() => {
 
       // given
-      var o = Base({ resourceType: 'Observation' });
+      var o = Resource({ resourceType: 'Observation' });
     })
 
     //then
@@ -22,7 +22,7 @@ describe('Base', () => {
   it('should have id and resourceType', () => {
 
     // when
-    var o = Base({ resourceType: 'Observation' });
+    var o = Resource({ resourceType: 'Observation' });
 
     // then
     expect(o).toHaveProperty('resourceType');
@@ -36,7 +36,7 @@ describe('Base', () => {
     expect(() => {
 
       // given
-      var o = Base({});
+      var o = Resource({});
     })
 
     //then
@@ -50,7 +50,7 @@ describe('Base', () => {
     expect(() => {
 
       // given
-      var o = Base({ id: 1111 });
+      var o = Resource({ id: 1111 });
     })
 
     //then
