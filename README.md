@@ -6,6 +6,8 @@
 
 This library provides a (very small atm) subset of javascript classes for the [HL7 FHIR][fhir] standard.
 
+[![UML](./classes.png)](./classes.png)
+
 ## Install
 
 ```sh
