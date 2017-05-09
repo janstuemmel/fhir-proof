@@ -57,4 +57,45 @@ describe('Resource', () => {
     .toThrow();
   });
 
+
+
+  it('should remove id', () => {
+
+    // given
+    var o = Resource({ id: '11', resourceType: 'Observation' });
+
+
+    // when
+    expect(() => {
+
+      var o2 = Resource.update(o, { $remove: [ 'id' ] });
+
+    })
+
+    //then
+    .not.toThrow();
+  });
+
+
+  it('should remove meta.lastUpdated', () => {
+
+    // given
+    var o = Resource({
+      resourceType: 'Observation',
+      meta: { lastUpdated: new Date().toISOString() }
+    });
+
+
+    // when
+    var o2 = Resource.update(o, {
+      meta: {
+        $remove: [ 'lastUpdated' ]
+      }
+    });
+
+    // then
+    expect(o2.meta.lastUpdated).toBeUndefined();
+
+  });
+
 });
