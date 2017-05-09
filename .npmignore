@@ -2,5 +2,7 @@
 .gitignore
 .travis.yml
 .babelrc
+.eslintignore
+docs
 coverage
 test
